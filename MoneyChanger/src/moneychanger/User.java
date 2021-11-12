@@ -18,25 +18,25 @@ public class User {
         this.alamat = almt;        
     }
     
-    protected void setUsername(String usernm){
+    public void setUsername(String usernm){
         this.username = usernm;
     }
     
-    protected String getUsername(User user){
+    public String getUsername(){
         return username;
     }
-    protected void setNama (String nama){
+    public void setNama (String nama){
         this.nama = nama;
     }
     
-    protected String getNama(User user){
+    public String getNama(){
         return nama;
     }
-    protected void setAlamat (String alamat){
+    public void setAlamat (String alamat){
         this.nama = alamat;
     }
     
-    protected String getAlamat(User user){
+    public String getAlamat(){
         return alamat;
     }
 }

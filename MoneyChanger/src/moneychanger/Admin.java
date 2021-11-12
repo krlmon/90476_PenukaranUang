@@ -10,18 +10,24 @@ package moneychanger;
  * @author Administrator
  */
 public class Admin extends User {
-    private MataUang mataUang[] = new MataUang[100];
     private String password;
     
-    protected Admin(){
-        super("admin", "123456", "Surabaya");
+    public Admin(String username, String nama, String alamat, String password){
+        super("admin", "Admin", "Surabaya");
+        this.password = "123456";
     }
     
-    protected void updateSaldo(MataUang mataUang, double saldo){
+    public void updateSaldo(MataUang mataUang, double saldo){
         mataUang.setSaldo(saldo);
     }
     
-    protected String getPassword(Admin adm){
-        return password;
+    public String getPassword(){
+        return this.password;
     }
+    
+    public String getUsername(){
+        return super.getUsername();
+    }
+    
+    
 }
