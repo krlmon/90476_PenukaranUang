@@ -5,17 +5,41 @@
  */
 package moneychanger;
 public class Uang {
-    private static String nama;
-    private double nominal;
+    private String negara, mataUang;
+    private double nominal,saldo,rupiah, nilaiTukar;
 
     public Uang(String nama, double nominal){
         this.nominal = nominal;
-        this.nama = nama;
+        this.mataUang = nama;
     }
     
-    protected double getNominal(Uang uang)
+    protected double getNominal()
     {
         return nominal;
     }
     
+    protected void setSaldo(double sld){
+        this.saldo = sld;
+    }
+    
+    protected double getSaldo(){
+        return saldo;
+    }
+    
+    protected void setNilaiTukar(double nltkr){
+        this.nilaiTukar = nltkr;
+    }
+    
+    protected double getNilaiTukar(){
+        return nilaiTukar;
+    }
+    
+    protected double getRupiah(){
+        rupiah = getNominal()*getSaldo();
+        return rupiah;
+    }
+    
+    protected  String getNegara(){
+        return this.negara;
+    }
 }

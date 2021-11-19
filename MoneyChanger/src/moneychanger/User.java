@@ -10,18 +10,15 @@ package moneychanger;
  * @author GENESIS
  */
 public class User {
-    private String username,nama, alamat;
+    private String username,nama, alamat, password;
     
-    public User(String uname, String nm, String almt){
+    public User(String uname, String nm, String almt, String pass){
         this.username = uname;
         this.nama = nm;
-        this.alamat = almt;        
+        this.alamat = almt;
+        this.password = pass;
     }
-    
-    public void setUsername(String usernm){
-        this.username = usernm;
-    }
-    
+        
     public String getUsername(){
         return username;
     }
@@ -39,4 +36,14 @@ public class User {
     public String getAlamat(){
         return alamat;
     }
+    
+    
+    public void setPassword (String pass){
+        this.password = pass;
+    }
+    
+    public String getPassword(){
+        return password;
+    }
+    
 }

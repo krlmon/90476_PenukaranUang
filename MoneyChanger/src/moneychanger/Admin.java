@@ -11,18 +11,18 @@ package moneychanger;
  */
 public class Admin extends User {
     private String password;
+    Uang uang[] = new Uang[100];
     
     public Admin(String username, String nama, String alamat, String password){
-        super("admin", "Admin", "Surabaya");
-        this.password = "123456";
+        super(username, nama, alamat,password);
     }
     
-    public void updateSaldo(MataUang mataUang, double saldo){
-        mataUang.setSaldo(saldo);
+    public void updateSaldo(double saldo){
+       // uang.setSaldo(saldo);
     }
     
     public String getPassword(){
-        return this.password;
+        return super.getPassword();
     }
     
     public String getUsername(){
