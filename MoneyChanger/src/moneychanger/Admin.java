@@ -10,7 +10,6 @@ package moneychanger;
  * @author Administrator
  */
 public class Admin extends User {
-    private String password;
     Uang uang[] = new Uang[100];
     
     public Admin(String username, String nama, String alamat, String password){
