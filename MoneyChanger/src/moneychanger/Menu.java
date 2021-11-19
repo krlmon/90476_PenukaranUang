@@ -40,7 +40,7 @@ public class Menu {
         if(cekLogin != -1){
             menuAdmin(); 
         }else{
-            MoneyChanger.setPil(1);
+            logonAdmin();
         }
     }
     
@@ -59,7 +59,7 @@ public class Menu {
         if(cekLogin != -1){
             menuUser(); 
         }else{
-            MoneyChanger.setPil(1);
+            logonUser();
         }
     }
     

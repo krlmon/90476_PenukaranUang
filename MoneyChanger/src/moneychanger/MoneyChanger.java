@@ -22,17 +22,17 @@ public class MoneyChanger {
         //adm = new Admin();
         // TODO code application logic here
         Scanner scan = new Scanner(System.in);
-        int pil,tot, jml;
-        Auth.dataAdmin();
+        int pil;
+        Auth.dataAdmin(); //Inisialisasi Admin dan user
         do{
-            Menu.menuUtama();
+            Menu.menuUtama(); //Tampilan Menu Utama
             pil = scan.nextInt();
             switch(pil){
                 case 1:
-                    Menu.logonAdmin();
+                    Menu.logonAdmin(); //Login Admin
                     break;
                 case 2:
-                    Menu.logonUser();
+                    Menu.logonUser(); //Login User
                     break;
                 case 3:
                     //
@@ -47,7 +47,4 @@ public class MoneyChanger {
       
     }
     
-    public static void setPil(int pil){
-        pil = pil;
-    }
 }

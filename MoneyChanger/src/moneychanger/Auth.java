@@ -64,7 +64,7 @@ public class Auth{
     static int loginUser(String nama, String password){
         int loop = 0;
            try{
-            for(int i=0; i <= dataUser(); i++){
+            for(int i=0; i <= jumUser; i++){
                 if(user[i].getUsername().equals(nama) && user[i].getPassword().equals(password)){
                     isLogin = user[i].getUsername();
                     index = i;
@@ -73,8 +73,8 @@ public class Auth{
                loop++;
             }
         } catch (Exception e){
-             System.err.println("Gagal Login " + user[loop].getUsername() + " " + user[loop].getPassword());
              loop = -1;
+             System.err.println("Gagal Login ");
         }
         return loop;
     }
