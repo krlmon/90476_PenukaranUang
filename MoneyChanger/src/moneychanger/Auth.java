@@ -9,14 +9,14 @@ import java.util.Scanner;
  *
  * @author GENESIS
  */
-public class Auth{
-    private static Admin[] admin = new Admin[100];
-    private static User[] user = new User[100];
-    private static int jumUser = 1, index=0;
-    private static String isLogin="";
+ public class  Auth{
+    private  Admin[] admin = new Admin[100];
+    private  User[] user = new User[100];
+    private  int jumUser = 1, index=0;
+    private  String isLogin="";
             
     
-     public static int dataAdmin() {
+     public int dataAdmin() {
         String userAdmin = "admin";
         String namaAdmin = "Admin";
         String alamatAdmin = "Surabaya";
@@ -26,26 +26,26 @@ public class Auth{
         return 1;
     }
     
-    public static int dataUser() {
+    public  int dataUser() {
         return user.length;
     }
-     public static int dataUser(String unm, String nm, String alm, String password) {
+     public  int dataUser(String unm, String nm, String alm, String password) {
         user[jumUser] = new User(unm, nm, alm, password);
         index = index + 1;
         jumUser = jumUser + 1;
         return jumUser-1;
     }
      
-      public static Admin[] getAdmin(){
+      public  Admin[] getAdmin(){
         return admin;
     }
       
     
-    public static User[] getUser(){
+    public  User[] getUser(){
         return user;
     }
     
-    static int loginAdmin(String nama, String password){
+     int loginAdmin(String nama, String password){
         int loop = 0;
            try{
             for(int i=0; i <= dataAdmin(); i++){
@@ -61,7 +61,7 @@ public class Auth{
         }
         return loop;
     }
-    static int loginUser(String nama, String password){
+    int loginUser(String nama, String password){
         int loop = 0;
            try{
             for(int i=0; i <= jumUser; i++){
@@ -84,12 +84,12 @@ public class Auth{
        isLogin = "";
        return isLogin;
     }
-     public static String getIsLogin(){
+     public  String getIsLogin(){
        return isLogin;
     }
     
      
-     public static int getJumlUser(){
+     public  int getJumlUser(){
        return jumUser;
     }
      
