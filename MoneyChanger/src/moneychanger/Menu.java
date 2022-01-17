@@ -131,7 +131,7 @@ public class Menu {
                     //updatePeserta();
                     break;
                 case 3:
-                    //viewPeserta();
+                    getSaldo();
                     break;
             }
         }while(pil != 0);
@@ -170,9 +170,7 @@ public class Menu {
         double nominal = scan.nextDouble();
         System.out.println("\nMasukkan Harga Tukar = ");
         double nilaiTukar = scan.nextDouble();
-        System.out.println("\nMasukkan Saldo Uang = ");
-        double saldo = scan.nextDouble();
-        int i = dataProcess.tambahUang(mataUang, negara, nominal, nilaiTukar, saldo);
+        int i = dataProcess.tambahUang(mataUang, negara, nominal, nilaiTukar);
         dataProcess.lihatUang(i-1);
      }
      
@@ -205,11 +203,14 @@ public class Menu {
         dataProcess.hapusUang(search-1);
     }
     
-    
     private void penggunaDeposit(){
         Scanner scan = new Scanner(System.in);
         System.out.println("Masukkan Jumlah Deposit (Rupiah) : ");
         double dpst = scan.nextDouble();
         dataProcess.depositPengguna(dpst);
+    }
+    
+    private void getSaldo(){
+        dataProcess.lihatSaldoPengguna();
     }
 }

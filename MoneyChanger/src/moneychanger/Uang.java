@@ -6,16 +6,24 @@
 package moneychanger;
 public class Uang {
     private String negara, mataUang;
-    private double nominal,saldo,rupiah, nilaiTukar;
+    private double nominal,saldo, nilaiTukar;
 
-    public Uang(String nama, String negara, double nominal, double nilaiTukar, double saldo){
+      public Uang(){
+        this.mataUang = "Dollar";
+        this.negara = "USA";
+        this.nominal = 100;
+        this.nilaiTukar = 14200;
+        hitRupiah(this.nominal,this.nilaiTukar);
+    }
+      
+    public Uang(String nama, String negara, double nominal, double nilaiTukar){
         this.mataUang = nama;
         this.negara = negara;
         this.nominal = nominal;
         this.nilaiTukar = nilaiTukar;
-        this.saldo = saldo;
-        hitRupiah(nominal,nilaiTukar,saldo);
+        hitRupiah(nominal,nilaiTukar);
     }
+    
     
     protected  String getNegara(){
         return this.negara;
@@ -23,10 +31,6 @@ public class Uang {
     
     protected  String getMatauang(){
         return this.mataUang;
-    }
-    
-    protected  double getRupiah(){
-        return this.rupiah;
     }
     
     protected double getNominal()
@@ -50,10 +54,8 @@ public class Uang {
         return nilaiTukar;
     }
     
-    protected void hitRupiah(double nominal, double saldo, double nilaiTukar){
-        double rp;
-        rp = nominal*saldo*nilaiTukar;
-        this.rupiah =  rp;
+    protected void hitRupiah(double nominal, double nilaiTukar){
+        this.saldo = nominal*nilaiTukar;
     }
     
 }

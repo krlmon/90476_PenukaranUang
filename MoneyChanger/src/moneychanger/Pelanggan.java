@@ -25,6 +25,7 @@ public class Pelanggan extends UserAbstract{
     }
     public void setSaldo(double saldo){
         this.saldo = saldo;
-    }    
+    }
+    
     
 }

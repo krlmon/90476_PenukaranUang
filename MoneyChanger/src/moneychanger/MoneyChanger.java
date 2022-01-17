@@ -23,6 +23,7 @@ public class MoneyChanger {
         // TODO code application logic here
         Auth auth = new Auth();
         Menu menu = new Menu();
+        Uang uang = new Uang();
         Scanner scan = new Scanner(System.in);
         int pil;
         auth.dataAdmin(); //Inisialisasi Admin dan user

@@ -15,7 +15,6 @@ public class DataProcess {
     private Uang[] uang = new Uang[100];
     private int jmlData = 0;
     
-    
     public Uang[] getUang(){
         return uang;
     }
@@ -24,15 +23,15 @@ public class DataProcess {
         return jmlData;
     }
     
-    public int tambahUang(String mataUang, String negara, double nominal, double nilaiTukar, double saldo) {
-        uang[jmlData] = new Uang(mataUang,negara, nominal, nilaiTukar, saldo);
+    public int tambahUang(String mataUang, String negara, double nominal, double nilaiTukar) {
+        uang[jmlData] = new Uang(mataUang,negara, nominal, nilaiTukar);
         jmlData = jmlData + 1;
         return jmlData;
     }
     
      public void ubahUang(int id, String nama, String negara, double nominal, double nilaiTukar, double saldo){
         Uang uang[] = getUang();
-        uang[id] = new Uang(nama,negara, nominal, nilaiTukar, saldo);
+        uang[id] = new Uang(nama,negara, nominal, nilaiTukar);
      }
      
     public void hapusUang(int id){
@@ -64,7 +63,6 @@ public class DataProcess {
                 + "\nNominal : " + uang[index].getNominal()
                 + "\nHarga : " + uang[index].getNilaiTukar()
                 + "\nSisa Saldo : " + uang[index].getSaldo()
-                + "\nNilai Tersedia : " + uang[index].getRupiah()
             );
             System.out.println("==================================");
      }
@@ -79,7 +77,6 @@ public class DataProcess {
                 + "\nNominal : " + uang[i].getNominal()
                 + "\nHarga : " + uang[i].getNilaiTukar()
                 + "\nSisa Saldo : " + uang[i].getSaldo()
-                + "\nNilai Tersedia : " + uang[i].getRupiah()
             );
             System.out.println("==================================");
         }
@@ -124,6 +121,11 @@ public class DataProcess {
         int i = auth.getIdLogin();
         user[i].setSaldo(deposit);
          lihatPengguna(i);
+     }
+     
+     public void lihatSaldoPengguna(){
+        int i = auth.getIdLogin();
+        user[i].getSaldo();
      }
     
 }
